@@ -2,7 +2,7 @@ package _53_Maximum_Subarray;
 
 class Solution {
   public int maxSubArray(int[] nums) {
-    int dp[] = new int[nums.length];
+    int[] dp = new int[nums.length];
     dp[0] = nums[0];
     int max = dp[0];
     for (int i = 1; i < nums.length; i++) {
