@@ -7,9 +7,9 @@ class Solution {
     int sum = Arrays.stream(stones).sum();
     int target = sum / 2;
     int[] dp = new int[target + 1];
-    for (int i = 1; i <= stones.length; i++) {
-      for (int j = target; j - stones[i - 1] >= 0; j--) {
-        dp[j] = Math.max(dp[j], dp[j - stones[i - 1]] + stones[i - 1]);
+    for (int stone : stones) {
+      for (int j = target; j - stone >= 0; j--) {
+        dp[j] = Math.max(dp[j], dp[j - stone] + stone);
       }
     }
     return sum - 2 * dp[target];
