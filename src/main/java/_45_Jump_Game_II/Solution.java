@@ -1,8 +1,5 @@
 package _45_Jump_Game_II;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 class Solution {
   public int jump(int[] nums) {
     int count = 0;
